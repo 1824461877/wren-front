@@ -1,5 +1,5 @@
 export const HEADER_ITEM_TITLE_ENGLISH = {
-  offset: "Offset Flights",
+  careers: "We're hiring",
   our_approach: "Our approach",
   projects: "Our projects",
   learn: "Learn more",
@@ -33,7 +33,7 @@ export const HEADER_ITEM_DESCRIPTION_CHINESE = {
 }
 
 export const HEADER_ITEM_TITLE_CHINESE = {
-  offset: "偏移航班",
+  careers: "加入我们的团队",
   our_approach: "我们的方法",
   projects: "我们的项目",
   learn: "了解更多",
@@ -60,9 +60,8 @@ export const HEADER_NAV_ICONS = {
 
 export const HEADER_NAV_LINK = {
   root: "/",
-  payment: "/payment",
   reset: "/reset",
-  offset: "/offset",
+  careers: "/careers",
   our_approach: "/our_approach",
   projects: "/projects",
   login: "/login",
@@ -77,8 +76,3 @@ export const HEADER_NAV_LINK = {
 }
 
 export const HEADER_SCROLL_LIMITE = 500
-
-export const HEADHER_LOGO = {
-  black: "logo-black.png",
-  white: "logo-white.png",
-}

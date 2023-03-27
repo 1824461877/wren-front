@@ -63,7 +63,7 @@ export const StartClimateBtn = styled(Link)`
   background-color: rgb(247, 159, 34);
   border-color: rgb(247, 159, 34);
   color: white;
-  box-shadow: 0 3px 2px 0 rgb(0, 0, 0, 0.15);
+  box-shadow: 0 3px 2px 0 var(--box-shadow-color);
   padding: 13px 36px;
   text-decoration: none !important;
 `

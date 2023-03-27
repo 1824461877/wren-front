@@ -7,7 +7,6 @@ import {
   HEADER_NAV_LINK,
   HEADER_NAV_ICONS,
   HEADER_SCROLL_LIMITE,
-  HEADHER_LOGO,
 } from "../../utils/headerUtils"
 
 import {
@@ -41,10 +40,6 @@ function Header(props) {
     props.lang == process.env.REACT_APP_LANG_CHINESE
       ? HEADER_ITEM_DESCRIPTION_CHINESE
       : HEADER_ITEM_DESCRIPTION_ENGLISH
-  const HEADER_LOGO_IMG =
-    props.themeColor == process.env.REACT_APP_BLACK_THEME
-      ? HEADHER_LOGO.black
-      : HEADHER_LOGO.white
   return (
     <CusNavbarOutline open={props.isOpenNav} scrol={props.isScrollEnable}>
       <RootItemContainer_W_90>
@@ -57,15 +52,20 @@ function Header(props) {
             to={HEADER_NAV_LINK.root}
           >
             <CusLogo
-              src={process.env.REACT_APP_PUBLIC_URL + HEADER_LOGO_IMG}
+              src={
+                process.env.REACT_APP_PUBLIC_URL +
+                (props.themeColor == process.env.REACT_APP_BLACK_THEME
+                  ? "logo-black.svg"
+                  : "logo-white.svg")
+              }
               alt="logo"
             />
           </Link>
           <div className="flex-initial flex align-items-center justify-content-between">
             <CusNavItemHGroup>
               <CusNavHItem>
-                <Link to={HEADER_NAV_LINK.offset}>
-                  {HEADER_TITLE_LANG.offset}
+                <Link to={HEADER_NAV_LINK.careers}>
+                  {HEADER_TITLE_LANG.careers}
                 </Link>
               </CusNavHItem>
               <CusNavHItem>

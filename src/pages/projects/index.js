@@ -9,45 +9,16 @@ import {
   ProjectStepImageSection,
   PorjectStep,
   ProjectItemHeader,
-  ProjectBanner,
-  ProjectDashboard,
-  ProjectDashboardSolutionContainer,
-  ProjectDashboardSolutionItem,
-  ProjectDashboardItemContainer,
-  ProjectDashboardItem1,
-  ProjectDashboardItem2,
-  ProjectDashboardAbout,
-  ProjectDashboardSpent,
-  ProjectDashboardSpentTypeItem,
-  ProjectDashboardPercentNumberItem,
-  ProjectDashboardPercentBarItem,
-  ProjectDashboardGraph,
-  ProjectDashboardMap,
-  ProjectPortfolioUpdate,
-  ProjectRecentSupporterContainer,
-  ProjectRecentSupporterItem,
-  ProjectPartnerOrganization,
-  ProjectCarbonSky,
-  ProjectCarbonSkyItem,
-  ProjectStartToday,
 } from "./component"
-
 import { PROJECT_UTILS } from "../../utils/projectUtils"
 
 function Project() {
   return (
     <ProjectSection>
       <ProjectHeader
-        ids={PROJECT_UTILS.header.ids}
         items={PROJECT_UTILS.header.items}
         imgSrc={PROJECT_UTILS.header.img}
         title={PROJECT_UTILS.header.title}
-      />
-      <ProjectBanner
-        id={PROJECT_UTILS.header.ids[0]}
-        imgSrc={PROJECT_UTILS.project_banner.imgSrc}
-        description={PROJECT_UTILS.project_banner.description}
-        title={PROJECT_UTILS.project_banner.title}
       />
       <ProjectItemSection>
         <ProjectItemHeader
@@ -56,7 +27,7 @@ function Project() {
           subTitle={PROJECT_UTILS.project_header[0].description}
         />
         <ProjectItem
-          btnColor="warning"
+          btnColor="danger"
           reverse={false}
           tagImgSrc={PROJECT_UTILS.project[0][0].tagImgSrc}
           title={PROJECT_UTILS.project[0][0].title}
@@ -66,7 +37,7 @@ function Project() {
           btnText={PROJECT_UTILS.project[0][0].btnText}
         />
         <ProjectItem
-          btnColor="warning"
+          btnColor="danger"
           reverse={true}
           tagImgSrc={PROJECT_UTILS.project[0][1].tagImgSrc}
           title={PROJECT_UTILS.project[0][1].title}
@@ -76,7 +47,7 @@ function Project() {
           btnText={PROJECT_UTILS.project[0][1].btnText}
         />
         <ProjectItem
-          btnColor="warning"
+          btnColor="danger"
           reverse={false}
           tagImgSrc={PROJECT_UTILS.project[0][2].tagImgSrc}
           title={PROJECT_UTILS.project[0][2].title}
@@ -86,7 +57,7 @@ function Project() {
           btnText={PROJECT_UTILS.project[0][2].btnText}
         />
         <ProjectItem
-          btnColor="warning"
+          btnColor="danger"
           reverse={true}
           tagImgSrc={PROJECT_UTILS.project[0][3].tagImgSrc}
           title={PROJECT_UTILS.project[0][3].title}
@@ -153,225 +124,6 @@ function Project() {
           imgSrc={PROJECT_UTILS.project[3][0].imgSrc}
           btnText={PROJECT_UTILS.project[3][0].btnText}
         />
-        <ProjectDashboard
-          imgSrc={PROJECT_UTILS.project_solution.portfolio_summary_img}
-          title={PROJECT_UTILS.project_solution.title}
-        >
-          <ProjectDashboardSolutionContainer>
-            <ProjectDashboardSolutionItem
-              imgSrc={PROJECT_UTILS.project_solution.item[0].img}
-              subTitle={PROJECT_UTILS.project_solution.item[0].sub_title}
-            />
-            <ProjectDashboardSolutionItem
-              imgSrc={PROJECT_UTILS.project_solution.item[1].img}
-              subTitle={PROJECT_UTILS.project_solution.item[1].sub_title}
-            />
-            <ProjectDashboardSolutionItem
-              imgSrc={PROJECT_UTILS.project_solution.item[2].img}
-              subTitle={PROJECT_UTILS.project_solution.item[2].sub_title}
-            />
-            <ProjectDashboardSolutionItem
-              imgSrc={PROJECT_UTILS.project_solution.item[3].img}
-              subTitle={PROJECT_UTILS.project_solution.item[3].sub_title}
-            />
-          </ProjectDashboardSolutionContainer>
-          <ProjectDashboardItemContainer>
-            <ProjectDashboardItem1
-              title={PROJECT_UTILS.project_dashboard.title[0]}
-            >
-              <ProjectDashboardAbout>
-                {PROJECT_UTILS.project_dashboard.about[0]}
-              </ProjectDashboardAbout>
-              <ProjectDashboardAbout>
-                {PROJECT_UTILS.project_dashboard.about[1]}
-              </ProjectDashboardAbout>
-            </ProjectDashboardItem1>
-            <ProjectDashboardItem2
-              title={PROJECT_UTILS.project_dashboard.title[1]}
-            >
-              <ProjectDashboardSpent>
-                <label className="cus_first"></label>
-                <label className="cus_second"></label>
-
-                <ProjectDashboardSpentTypeItem
-                  title={PROJECT_UTILS.project_dashboard.spent.type.title}
-                  imgSrc={PROJECT_UTILS.project_dashboard.spent.type.img[0]}
-                >
-                  <span className="cus_quz_icon" tabIndex="0">
-                    <div
-                      alt=""
-                      src={PROJECT_UTILS.project_dashboard.spent.type.quz_uri}
-                    >
-                      ?
-                    </div>
-                  </span>
-                </ProjectDashboardSpentTypeItem>
-                <ProjectDashboardPercentNumberItem>
-                  {PROJECT_UTILS.project_dashboard.spent.type.percent[0]}%
-                </ProjectDashboardPercentNumberItem>
-                <ProjectDashboardPercentBarItem
-                  widthValue={
-                    PROJECT_UTILS.project_dashboard.spent.type.percent[0]
-                  }
-                />
-
-                <ProjectDashboardSpentTypeItem
-                  title={PROJECT_UTILS.project_dashboard.spent.type.title}
-                  imgSrc={PROJECT_UTILS.project_dashboard.spent.type.img[1]}
-                ></ProjectDashboardSpentTypeItem>
-                <ProjectDashboardPercentNumberItem>
-                  {PROJECT_UTILS.project_dashboard.spent.type.percent[1]}%
-                </ProjectDashboardPercentNumberItem>
-                <ProjectDashboardPercentBarItem
-                  widthValue={
-                    PROJECT_UTILS.project_dashboard.spent.type.percent[1]
-                  }
-                />
-
-                <ProjectDashboardSpentTypeItem
-                  title={PROJECT_UTILS.project_dashboard.spent.type.title}
-                  imgSrc={PROJECT_UTILS.project_dashboard.spent.type.img[2]}
-                ></ProjectDashboardSpentTypeItem>
-                <ProjectDashboardPercentNumberItem>
-                  {PROJECT_UTILS.project_dashboard.spent.type.percent[2]}%
-                </ProjectDashboardPercentNumberItem>
-                <ProjectDashboardPercentBarItem
-                  widthValue={
-                    PROJECT_UTILS.project_dashboard.spent.type.percent[2]
-                  }
-                />
-
-                <ProjectDashboardSpentTypeItem
-                  title={PROJECT_UTILS.project_dashboard.spent.type.title}
-                  imgSrc={PROJECT_UTILS.project_dashboard.spent.type.img[3]}
-                ></ProjectDashboardSpentTypeItem>
-                <ProjectDashboardPercentNumberItem>
-                  {PROJECT_UTILS.project_dashboard.spent.type.percent[3]}%
-                </ProjectDashboardPercentNumberItem>
-                <ProjectDashboardPercentBarItem
-                  widthValue={
-                    PROJECT_UTILS.project_dashboard.spent.type.percent[3]
-                  }
-                />
-              </ProjectDashboardSpent>
-            </ProjectDashboardItem2>
-            <ProjectDashboardItem2
-              title={PROJECT_UTILS.project_dashboard.title[2]}
-            >
-              <ProjectDashboardGraph
-                imgSrc={PROJECT_UTILS.project_dashboard.graph_img}
-              ></ProjectDashboardGraph>
-            </ProjectDashboardItem2>
-            <ProjectDashboardItem1
-              title={PROJECT_UTILS.project_dashboard.title[3]}
-            >
-              <ProjectDashboardMap
-                link={PROJECT_UTILS.project_dashboard.map_img}
-              />
-            </ProjectDashboardItem1>
-            <ProjectDashboardItem1
-              title={PROJECT_UTILS.project_dashboard.title[4]}
-            >
-              <ProjectPortfolioUpdate
-                imgSrc={
-                  PROJECT_UTILS.project_dashboard.portfolio_update.imgSrc[0]
-                }
-                date={PROJECT_UTILS.project_dashboard.portfolio_update.date[0]}
-                content={
-                  PROJECT_UTILS.project_dashboard.portfolio_update.content[0]
-                }
-              />
-              <ProjectPortfolioUpdate
-                imgSrc={
-                  PROJECT_UTILS.project_dashboard.portfolio_update.imgSrc[1]
-                }
-                date={PROJECT_UTILS.project_dashboard.portfolio_update.date[1]}
-                content={
-                  PROJECT_UTILS.project_dashboard.portfolio_update.content[1]
-                }
-              />
-              <ProjectPortfolioUpdate
-                imgSrc={
-                  PROJECT_UTILS.project_dashboard.portfolio_update.imgSrc[2]
-                }
-                date={PROJECT_UTILS.project_dashboard.portfolio_update.date[2]}
-                content={
-                  PROJECT_UTILS.project_dashboard.portfolio_update.content[2]
-                }
-              />
-            </ProjectDashboardItem1>
-            <ProjectDashboardItem2
-              title={PROJECT_UTILS.project_dashboard.title[5]}
-            >
-              <ProjectRecentSupporterContainer>
-                <ProjectRecentSupporterItem
-                  username={
-                    PROJECT_UTILS.project_dashboard.supporter.username[0]
-                  }
-                  time={PROJECT_UTILS.project_dashboard.supporter.time[0]}
-                  amount={PROJECT_UTILS.project_dashboard.supporter.amount[0]}
-                  imgSrc={PROJECT_UTILS.project_dashboard.supporter.img[0]}
-                />
-                <ProjectRecentSupporterItem
-                  username={
-                    PROJECT_UTILS.project_dashboard.supporter.username[1]
-                  }
-                  time={PROJECT_UTILS.project_dashboard.supporter.time[1]}
-                  amount={PROJECT_UTILS.project_dashboard.supporter.amount[1]}
-                  imgSrc={PROJECT_UTILS.project_dashboard.supporter.img[1]}
-                />
-                <ProjectRecentSupporterItem
-                  username={
-                    PROJECT_UTILS.project_dashboard.supporter.username[2]
-                  }
-                  time={PROJECT_UTILS.project_dashboard.supporter.time[2]}
-                  amount={PROJECT_UTILS.project_dashboard.supporter.amount[2]}
-                  imgSrc={PROJECT_UTILS.project_dashboard.supporter.img[2]}
-                />
-                <ProjectRecentSupporterItem
-                  username={
-                    PROJECT_UTILS.project_dashboard.supporter.username[3]
-                  }
-                  time={PROJECT_UTILS.project_dashboard.supporter.time[3]}
-                  amount={PROJECT_UTILS.project_dashboard.supporter.amount[3]}
-                  imgSrc={PROJECT_UTILS.project_dashboard.supporter.img[3]}
-                />
-                <ProjectRecentSupporterItem
-                  username={
-                    PROJECT_UTILS.project_dashboard.supporter.username[4]
-                  }
-                  time={PROJECT_UTILS.project_dashboard.supporter.time[4]}
-                  amount={PROJECT_UTILS.project_dashboard.supporter.amount[4]}
-                  imgSrc={PROJECT_UTILS.project_dashboard.supporter.img[4]}
-                />
-                <ProjectRecentSupporterItem
-                  username={
-                    PROJECT_UTILS.project_dashboard.supporter.username[5]
-                  }
-                  time={PROJECT_UTILS.project_dashboard.supporter.time[5]}
-                  amount={PROJECT_UTILS.project_dashboard.supporter.amount[5]}
-                  imgSrc={PROJECT_UTILS.project_dashboard.supporter.img[5]}
-                />
-                <ProjectRecentSupporterItem
-                  username={
-                    PROJECT_UTILS.project_dashboard.supporter.username[6]
-                  }
-                  time={PROJECT_UTILS.project_dashboard.supporter.time[6]}
-                  amount={PROJECT_UTILS.project_dashboard.supporter.amount[6]}
-                  imgSrc={PROJECT_UTILS.project_dashboard.supporter.img[6]}
-                />
-                <ProjectRecentSupporterItem
-                  username={
-                    PROJECT_UTILS.project_dashboard.supporter.username[7]
-                  }
-                  time={PROJECT_UTILS.project_dashboard.supporter.time[7]}
-                  amount={PROJECT_UTILS.project_dashboard.supporter.amount[7]}
-                  imgSrc={PROJECT_UTILS.project_dashboard.supporter.img[7]}
-                />
-              </ProjectRecentSupporterContainer>
-            </ProjectDashboardItem2>
-          </ProjectDashboardItemContainer>
-        </ProjectDashboard>
       </ProjectItemSection>
       <ProjectChooseContainer
         title={PROJECT_UTILS.img_step.title}
@@ -393,33 +145,6 @@ function Project() {
           </div>
         ))}
       </ProjectChooseContainer>
-      <ProjectPartnerOrganization
-        title={PROJECT_UTILS.organization.title}
-        imgSrc={PROJECT_UTILS.organization.imgSrc}
-      />
-      <ProjectCarbonSky
-        imgSrc={PROJECT_UTILS.sky.header_img}
-        title={PROJECT_UTILS.sky.header_title}
-        subTitle={PROJECT_UTILS.sky.header_sub_title}
-      >
-        {Object.keys(PROJECT_UTILS.sky.items).map((key) => (
-          <ProjectCarbonSkyItem
-            key={key}
-            imgSrc={PROJECT_UTILS.sky.items[key].img}
-            iconSrc={PROJECT_UTILS.sky.items[key].icon}
-            date={PROJECT_UTILS.sky.items[key].date}
-            activeSentence={PROJECT_UTILS.sky.items[key].description}
-            username={PROJECT_UTILS.sky.items[key].username}
-            readUpdate={PROJECT_UTILS.sky.items[key].active_btn}
-          />
-        ))}
-      </ProjectCarbonSky>
-      <ProjectStartToday
-        imgSrc={PROJECT_UTILS.start.img}
-        title={PROJECT_UTILS.start.title}
-        subTitle={PROJECT_UTILS.start.sub_title}
-        btnText={PROJECT_UTILS.start.btn_text}
-      />
     </ProjectSection>
   )
 }

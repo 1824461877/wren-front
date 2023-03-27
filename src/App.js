@@ -11,10 +11,6 @@ import Root from "./pages"
 import Dashboard from "./pages/dashboard"
 import Approach from "./pages/approach"
 import Project from "./pages/projects"
-import Login from "./pages/login"
-import Offset from "./pages/offset"
-import Reset from "./pages/reset"
-import Payment from "./pages/payment"
 import Error from "./pages/error"
 
 import { HEADER_NAV_LINK } from "./utils/headerUtils"
@@ -30,20 +26,16 @@ const router = createBrowserRouter([
         element: <Dashboard title="root" />,
       },
       {
-        path: HEADER_NAV_LINK.payment,
-        element: <Payment />,
-      },
-      {
         path: HEADER_NAV_LINK.reset,
-        element: <Reset title="reset" />,
+        element: <Dashboard title="reset" />,
       },
       {
         path: HEADER_NAV_LINK.login,
-        element: <Login title="login" />,
+        element: <Dashboard title="login" />,
       },
       {
-        path: HEADER_NAV_LINK.offset,
-        element: <Offset title="offset" />,
+        path: HEADER_NAV_LINK.careers,
+        element: <Dashboard title="careers" />,
       },
       {
         path: HEADER_NAV_LINK.our_approach,

@@ -187,7 +187,7 @@ export const CusNavVSubItem = styled(CusNavVSubItemChild)`
 `
 export const CusLogo = styled.img`
   height: 100%;
-  max-width: 170px;
+  max-width: 90px;
 `
 
 export const CusStartBtn = styled.div`
